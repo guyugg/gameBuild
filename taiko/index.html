@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>##gameHtmlTitle##</title>
+    <!--important!!-->
+    <!--gameHtmlBaseHerf-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="">
+    <meta name="x5-orientation" content="">
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" href="ifun.styles.css">
+    <script id="keydata" type="application/json">##gameJsKeyData##</script>
+    <script id="connect" type="application/json">##gameJsConnect##</script>
+</head>
+
+<body>
+    <divㄋ></div>
+    <script src="ifun.toolkit.js"></script>
+    <script>
+        // window['keyData'] = document.getElementById('keydata').textContent;
+        window.onload = function() {
+            ifun.setupMobile({
+                orientation: 2,
+                canvasId: 'gameFrame',
+                noSleep: true,
+                iosOnlySafari: false
+            });
+            // console.info(ifun.dump);
+            // ifun.setupConnector();
+        };
+        ifun.setBackgroundImg();
+    </script>
+    <iframe id="gameFrame" allowtransparency="true" src="game.html"></iframe>
+</body>
+
+</html>
